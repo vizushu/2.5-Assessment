@@ -1,19 +1,20 @@
-const functions = require('./functions')
-const data      = require('./testData')
+const functions = require('../test-assets/functions')
+const data      = require('../test-assets/testData')
 
 module.exports = {
     beforeEach: browser => {
         browser.url('http://localhost:3000/')
+            .waitForElementPresent('body', 3000)
     },
     after: browser => {
         browser
             .end()
     },
-    'Even and Odds test' : browser => {functions.evenOdd()},
-    'Filter Object test': browser => {functions.filterObj()},
-    'Filter Name test': browser => {functions.filterName()},
-    'Palindrome test' : browser => {functions.palindrome()},
-    'Sum test': browser => {functions.sum()}
+    'Even and Odd test' : browser => {functions.evenOdd(browser)},
+    'Filter Object test': browser => {functions.filterObj(browser)},
+    'Filter Name test': browser => {functions.filterName(browser)},
+    'Palindrome test' : browser => {functions.palindrome(browser)},
+    'Sum test': browser => {functions.sum(browser)}
 
 }
 
