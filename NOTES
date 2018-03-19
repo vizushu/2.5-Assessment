@@ -1,0 +1,9 @@
+Evene & Odds split button   :   'button[name="evenOddButton"]'
+
+Filter Object filter button :   'button[name="objectFilterButton"]'
+
+Filter tring filter button  :   'button[id="nameFilterButton"]'
+
+Palindrome check button     :   'button[name="palindromeButton"]'
+
+Sum Add button              :   'button[name="sumButton"]'
